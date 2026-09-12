@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Car Rental - Tour and Travel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="car.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Book Your Ride here!!</h1>
+            <!-- <p class="subheading">Chloo Chlee Ghumneeee!!!</p> -->
+        </div>
+    </header>
+
+    <section class="car-selection">
+        <div class="container">
+            <h2>Select a Car</h2>
+            <div class="car-options">
+                <div class="car-option" id="car1">
+                    <img src="https://spn-sta.spinny.com/blog/20220825223325/Luxury-SUVs.jpg?compress=true&quality=80&w=600&dpr=2.6" alt="SUV" class="car-img">
+                    <h3>SUV</h3>
+                    <p>₹3500 per day</p>
+                    <button class="select-car" onclick="selectCar('SUV', 3500)">Select</button>
+                </div>
+                <div class="car-option" id="car2">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTncFou1O5mb0xKQcpXVlkATY9vgSbjnTA3qg&s" alt="Luxury Sedan" class="car-img">
+                    <h3>Luxury Sedan</h3>
+                    <p>₹7000 per day</p>
+                    <button class="select-car" onclick="selectCar('Luxury Sedan', 7000)">Select</button>
+                </div>
+                <div class="car-option" id="car3">
+                    <img src="https://assets.newatlas.com/dims4/default/844a1bc/2147483647/strip/true/crop/3024x3031+0+0/resize/2873x2880!/quality/90/?url=http%3A%2F%2Fnewatlas-brightspot.s3.amazonaws.com%2Fc1%2Fe8%2F54d8971948b9b9a300e77989fc0a%2Ff1b10887-6b4c-46e0-811a-6683aaaa739a.jpg" alt="Convertible" class="car-img">
+                    <h3>Convertible</h3>
+                    <p>₹8500 per day</p>
+                    <button class="select-car" onclick="selectCar('Convertible', 8500)">Select</button>
+                </div>
+                <div class="car-option" id="car4">
+                    <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Verna/9744/1694602806760/front-left-side-47.jpg" alt="Sedan" class="car-img">
+                    <h3>Sedan</h3>
+                    <p>₹4000 per day</p>
+                    <button class="select-car" onclick="selectCar('Sedan', 4000)">Select</button>
+                </div>
+                <div class="car-option" id="car5">
+                    <img src="https://spn-sta.spinny.com/blog/20221003165403/Honda-City-eHEV-hybrid.jpg?compress=true&quality=80&w=1200&dpr=2.6" alt="Hatchback" class="car-img">
+                    <h3>Hatchback</h3>
+                    <p>₹2500 per day</p>
+                    <button class="select-car" onclick="selectCar('Hatchback', 2500)">Select</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="rental-details">
+        <div class="container">
+            <h2>Rental Details</h2>
+            <form id="rental-form">
+                <label for="pickup-location">Pick-up Location:</label>
+                <select id="pickup-location" required>
+                    <option value="New Delhi">New Delhi</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Bangalore">Bangalore</option>
+                    <option value="Chennai">Chennai</option>
+                    <option value="Kolkata">Kolkata</option>
+                    <option value="Hyderabad">Hyderabad</option>
+                </select>
+
+                <label for="dropoff-location">Drop-off Location:</label>
+                <select id="dropoff-location" required>
+                    <option value="New Delhi">New Delhi</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Bangalore">Bangalore</option>
+                    <option value="Chennai">Chennai</option>
+                    <option value="Kolkata">Kolkata</option>
+                    <option value="Hyderabad">Hyderabad</option>
+                </select>
+
+                <label for="pickup-date">Pick-up Date:</label>
+                <input type="date" id="pickup-date" required>
+
+                <label for="dropoff-date">Drop-off Date:</label>
+                <input type="date" id="dropoff-date" required>
+
+                <label for="rental-days">Number of Days:</label>
+                <input type="number" id="rental-days" name="rental-days" min="1" value="1" required>
+
+                <div>
+                    <label for="selected-car">Selected Car:</label>
+                    <input type="text" id="selected-car" disabled>
+                </div>
+
+                <div>
+                    <label for="total-price">Total Price:</label>
+                    <input type="text" id="total-price" disabled>
+                </div>
+
+                <button type="submit">Book Now</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Tour and Travel Car Rentals. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="car.js"></script>
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Website</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">TravelParadox</h1>
+            <ul class="nav-links">
+                <li><a href="hotel.html">Hotels</a></li>
+                
+                <li><a href="flight.html">Flights</a></li>
+                <li><a href="car.html">Car Rentals</a></li>
+                <li><a href="taxi.html">Airport Taxis</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    
+    <div class="slider">
+        <div class="slides">
+            <div class="slide fade">
+                <img src="WhatsApp Image 2024-11-12 at 22.13.20.jpeg" alt="Travel Destination 1" >
+                <div class="text">Explore the Beautiful Beaches</div>
+            </div>
+            <div class="slide fade">
+                <img src="WhatsApp Image 2024-11-12 at 22.13.40.jpeg" alt="Travel Destination 2">
+                <div class="text">Discover Majestic Mountains</div>
+            </div>
+            <div class="slide fade">
+                <img src="WhatsApp Image 2024-11-12 at 22.17.57.jpeg" alt="Travel Destination 3">
+                <div class="text">Experience Vibrant City Life</div>
+            </div>
+        </div>
+        <div class="dots">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </div>
+
+    <div class="offers">
+        <h2>Exclusive Offers</h2>
+        <div class="offer-cards">
+            <div class="offer-card">
+                <h3>Get Discounts on Flights</h3>
+                <p>Book your next flight and save up to 30%!</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+            <div class="offer-card">
+                <h3>Discounts on Hotels</h3>
+                <p>Enjoy special rates on hotel bookings.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Trending Destinations Section -->
+<div class="trending-destinations">
+    <h2>Trending Destinations in India</h2>
+    <div class="destination-cards">
+        <div class="destination-card">
+            <img src="https://i.pinimg.com/236x/86/68/80/8668802fed844bedaf7b1ebbc8edb8c3.jpg" alt="Goa">
+            <h3>Goa</h3>
+            <p>Experience the vibrant beaches and dance to the rhythm of waves in Goa.</p>
+            <button class="btn1 book-hotel"><a href="hotel.html">Book Hotel</a></button>
+            <button class="btn1 book-flight"><a href="flight.html">Book Flight</a></button>
+        </div>
+        <div class="destination-card">
+            <img src="https://i.pinimg.com/474x/d5/6a/d6/d56ad6b2e3cc8a9479c290283dc5a409.jpg" alt="Jaipur">
+            <h3>Jaipur</h3>
+            <p>Explore the rich history and stunning architecture of the Pink City.</p>
+            <button class="btn1 book-hotel"><a href="hotel.html">Book Hotel</a></button>
+            <button class="btn1 book-flight"><a href="flight.html">Book Flight</a></button>
+        </div>
+        <div class="destination-card">
+            <img src="https://i.pinimg.com/236x/c6/f7/40/c6f74028e1026588612bdece15c6e297.jpg" alt="Kerala">
+            <h3>Kerala</h3>
+            <p>Discover the serene backwaters and lush landscapes of Kerala:God's own country.</p>
+            <button class="btn1 book-hotel"><a href="hotel.html">Book Hotel</a></button>
+            <button class="btn1 book-flight"><a href="flight.html">Book Flight</a></button>
+        </div>
+        <div class="destination-card">
+            <img src="https://i.pinimg.com/736x/f6/bb/9d/f6bb9de28e002bb2847cc5b76bdd8057.jpg" alt="Ladakh">
+            <h3>Ladakh</h3>
+            <p>Experience the breathtaking landscapes and unique culture of Ladakh.</p>
+            <button class="btn1 book-hotel"><a href="hotel.html">Book Hotel</a></button>
+            <button class="btn1 book-flight"><a href="flight.html">Book Flight</a></button>
+        </div>
+        
+    </div>
+    <div class="destination-cards">
+        <div class="destination-card">
+            <img src="https://i.pinimg.com/736x/d9/21/ce/d921ce0dca361c69e9a7668130c2d033.jpg" alt="Varanasi">
+            <h3>Varanasi</h3>
+            <p>Immerse yourself in the spiritual ambiance of the holy city of Varanasi.</p>
+            <button class="btn1 book-hotel"><a href="hotel.html">Book Hotel</a></button>
+            <button class="btn1 book-flight"><a href="flight.html">Book Flight</a></button>
+        </div>
+        <div class="destination-card">
+            <img src="https://i.pinimg.com/564x/bb/15/ad/bb15ad4f581768bfceed009b670dbbf2.jpg" alt="Mysore">
+            <h3>Mysore</h3>
+            <p>Visit the majestic Mysore Palace and experience royal heritage.</p>
+            <button class="btn1 book-hotel"><a href="hotel.html">Book Hotel</a></button>
+            <button class="btn1 book-flight"><a href="flight.html">Book Flight</a></button>
+        </div>
+        <div class="destination-card">
+            <img src="https://i.pinimg.com/564x/29/a8/9a/29a89aabae38794b68acfd9457f58bad.jpg" alt="Rishikesh">
+            <h3>Rishikesh</h3>
+            <p>Rishikesh, where the sound of ganges becomes your meditation.</p>
+            <button class="btn1 book-hotel"><a href="hotel.html">Book Hotel</a></button>
+            <button class="btn1 book-flight"><a href="flight.html">Book Flight</a></button>
+        </div>
+        <div class="destination-card">
+            <img src="https://i.pinimg.com/564x/73/6c/c3/736cc374acdfd67f3bff3986a6c6421e.jpg" alt="Andaman Islands">
+            <h3>Andaman Islands</h3>
+            <p>Relax on the pristine beaches and enjoy water sports in the Andaman Islands.</p>
+            <button class="btn1 book-hotel"><a href="hotel.html">Book Hotel</a></button>
+            <button class="btn1 book-flight"><a href="flight.html">Book Flight</a></button>
+        </div>
+    </div>
+</div>
+
+<!-- Weekend Getaways Section -->
+ <!-- Weekend Getaways Section -->
+<div class="weekend-getaways">
+    <h2>Weekend Getaways in India</h2>
+    <div class="getaway-cards">
+        <div class="getaway-card">
+            <img src="https://i.pinimg.com/564x/37/39/be/3739be12fdb9a3945f3261801cc21748.jpg" alt="Resort 1">
+            <h3>The Leela, Udaipur</h3>
+            <p>Experience luxury and tranquility at The Leela, surrounded by the serene Lake Pichola.</p>
+            
+        </div>
+        <div class="getaway-card">
+            <img src="https://i.pinimg.com/564x/8f/5b/be/8f5bbe744f2d4b1b52a28edcb4560b53.jpg" alt="Resort 2">
+            <h3>Amanbagh, Rajasthan</h3>
+            <p>Enjoy the royal heritage and stunning architecture at Amanbagh, a perfect blend of luxury and tradition.</p>
+            
+        </div>
+        <div class="getaway-card">
+            <img src="https://i.pinimg.com/564x/86/19/00/86190083240d0e10316a7d179f186f6f.jpg" alt="Resort 3">
+            <h3>W Goa, Goa</h3>
+            <p>Relax at W Goa, where the beach meets luxury, and enjoy vibrant nightlife and exquisite dining.</p>
+            
+        </div>
+        <div class="getaway-card">
+            <img src="https://i.pinimg.com/564x/1d/8e/17/1d8e173fd24b13bb3a460fe78e969cae.jpg" alt="Resort 4">
+            <h3>Wildflower Hall, Shimla</h3>
+            <p>Unwind in the lap of nature at Wildflower Hall, with stunning views of the Himalayas.</p>
+
+        </div>
+        <div class="getaway-card">
+            <img src="https://i.pinimg.com/564x/45/c5/ff/45c5ffea765b3b0a7ea5473b5b2ec5d9.jpg" alt="Resort 5">
+            <h3>The Taj Exotica, Benaulim</h3>
+            <p>Indulge in a luxurious stay at The Taj Exotica, overlooking the beautiful Arabian Sea.</p>
+            
+        </div>
+        <div class="getaway-card">
+            <img src="https://i.pinimg.com/736x/4b/18/c2/4b18c23d14803c787eb2a6cbc52eabe4.jpg" alt="Resort 6">
+            <h3>Radisson Blu, Lonavala</h3>
+            <p>Escape to the hills at Radisson Blu, offering a perfect blend of comfort and nature.</p>
+            
+        </div>
+    </div>
+</div>
+<!-- Weekend Getaways Section -->
+<!-- Trip Planner Section -->
+<!-- Trip Planner Section -->
+<div class="trip-planner">
+    <h2>Where do you wanna go?</h2>
+    <div class="options">
+        <button class="option" data-type="city">City</button>
+        <button class="option" data-type="outdoors">Outdoors</button>
+        <button class="option" data-type="beach">Beach</button>
+        <button class="option" data-type="mountains">Mountains</button>
+    </div>
+    <div class="city-list" id="city-list">
+        <!-- Cities will be displayed here based on selection -->
+    </div>
+    
+</div>
+
+<div class="blog-section">
+    <h2>Latest Blogs</h2>
+    <div class="blog-container">
+        <div class="blog-post">
+            <img src="https://i.pinimg.com/564x/78/6d/2d/786d2d572eb657587c640b80e02711b5.jpg" alt="Blog Post 1">
+            <h3>Exploring the Wonders of the World</h3>
+            <div style="display: flex;justify-content: center; flex-direction: column; align-items: center;"><p>Discover the beauty of nature and the wonders of the world in this exciting travel blog.</p>
+            <a href="https://travelswiththecrew.com/visit-the-7-or-8-wonders-of-the-world-a-comprehensive-guide/" target="_main" class="read-more">Read More</a></div>
+        </div>
+        <div class="blog-post">
+            <img src="https://i.pinimg.com/564x/45/be/23/45be23dbeaa10694898ba30a7ceac70e.jpg" alt="Blog Post 2">
+            <h3>Top 10 Destinations for 2023</h3>
+            <div style="display: flex;justify-content: center; flex-direction: column; align-items: center;"><p>Check out our list of the top 10 travel destinations you must visit this year!</p>
+            <a style="margin-top: 28px;" href="https://www.forbes.com/sites/laurabegleybloom/2023/03/30/the-23-best-places-to-travel-in-2023-chosen-by-the-experts/" target="_main" class="read-more">Read More</a>
+            </div>
+        </div>
+        <div class="blog-post">
+            <img src="https://i.pinimg.com/564x/ba/4b/33/ba4b333929a8a1154a419ef0e93d497c.jpg" alt="Blog Post 3">
+            <h3>Travel Tips for Budget Travelers</h3>
+            <div style="display: flex;justify-content: center; flex-direction: column; align-items: center;"><p>Learn how to travel on a budget without compromising on experiences.</p>
+            <a  style="margin-top: 28px;" href="https://travellemming.com/budget-travel-tips/" target="_main" class="read-more">Read More</a></div>
+        </div>
+        <div class="blog-post">
+            <img src="https://i.pinimg.com/564x/18/b0/d1/18b0d17ac5ec406106623a775190e92f.jpg" alt="Blog Post 4">
+            <h3>Adventure Awaits: Hiking Trails</h3>
+            <div style="display: flex;justify-content: center; flex-direction: column; align-items: center;"><p>Join us as we explore some of the best hiking trails around the globe.</p>
+            <a  style="margin-top: 28px;" href="https://www.mydreamadventure.in/blogs/adventure-awaits" target="_main" class="read-more">Read More</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h4>About Us</h4>
+            <p>Your go-to platform for discovering amazing travel experiences and tips.</p>
+        </div>
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Destinations</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Follow Us</h4>
+            <ul class="social-media">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">LinkedIn</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2023 Your Travel Website. All rights reserved.</p>
+    </div>
+</footer>
+
+    
+    <script src="home.js"></script>
+</body>
+</html>

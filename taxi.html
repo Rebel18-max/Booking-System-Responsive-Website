@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airport Taxi Pickup</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+
+        header{
+            background-color: #3a6e8e;
+        }
+        body {
+    background-color: #f8f9fa;
+}
+
+
+
+h1 {
+    color: #3a6e8e;
+}
+
+#confirmationMessage {
+    border: 1px solid #3a6e8e;
+    padding: 10px;
+    background-color: #e7f1ff;
+    color: #3a6e8e;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center my-4">Airport Taxi Pickup</h1>
+        
+        <form id="taxiPickupForm">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" class="form-control" id="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="airport">Select Airport</label>
+                <select class="form-control" id="airport" required>
+                    <option value="">Select Airport</option>
+                    <option value="Delhi Airport">Delhi Airport</option>
+                    <option value="Mumbai Airport">Mumbai Airport</option>
+                    <option value="Bangalore Airport">Bangalore Airport</option>
+                    <option value="Chennai Airport">Chennai Airport</option>
+                    <option value="Kolkata Airport">Kolkata Airport</option>
+                    <!-- Add more airports as needed -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="pickupTime">Pickup Time</label>
+                <input type="datetime-local" class="form-control" id="pickupTime" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Request Pickup</button>
+        </form>
+        
+        <div id="confirmationMessage" class="mt-4" style="display: none;"></div>
+    </div>
+    <script src="taxi.js"></script>
+</body>
+</html>

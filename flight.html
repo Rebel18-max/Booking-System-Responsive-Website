@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Booking - Tour & Travel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="flight.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>Book Your Flight</h1>
+        <p>Find the best flights for your next adventure!</p>
+    </header>
+
+    <!-- SEARCH FLIGHT FORM -->
+    <section class="search-section">
+        <h2>Search Flights</h2>
+        <form id="flight-search-form">
+            <!-- Departure Location -->
+            <div class="input-group">
+                <label for="departure-location">Departure Location</label>
+                <select id="departure-location" required>
+                    <option value="">Select Departure City</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Bangalore">Bangalore</option>
+                    <option value="Chennai">Chennai</option>
+                    <option value="Kolkata">Kolkata</option>
+                    <option value="Hyderabad">Hyderabad</option>
+                    <option value="Goa">Goa</option>
+                    <option value="Jaipur">Jaipur</option>
+                </select>
+            </div>
+
+            <!-- Destination Location -->
+            <div class="input-group">
+                <label for="destination-location">Destination Location</label>
+                <select id="destination-location" required>
+                    <option value="">Select Destination City</option>
+                    <option value="">Select Departure City</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Bangalore">Bangalore</option>
+                    <option value="Chennai">Chennai</option>
+                    <option value="Kolkata">Kolkata</option>
+                    <option value="Hyderabad">Hyderabad</option>
+                    <option value="Goa">Goa</option>
+                    <option value="Jaipur">Jaipur</option>
+                </select>
+            </div>
+
+            <!-- Travel Dates -->
+            <div class="input-group">
+                <label for="departure-date">Departure Date</label>
+                <input type="date" id="departure-date" required>
+            </div>
+
+            <div class="input-group">
+                <label for="return-date">Return Date (Optional)</label>
+                <input type="date" id="return-date">
+            </div>
+
+            <!-- Number of Passengers -->
+            <div class="input-group">
+                <label for="passengers">Number of Passengers</label>
+                <input type="number" id="passengers" min="1" value="1" required>
+            </div>
+
+            <!-- Class of Service -->
+            <div class="input-group">
+                <label for="class">Class of Service</label>
+                <select id="class" required>
+                    <option value="economy">Economy</option>
+                    <option value="business">Business</option>
+                    <option value="first">First</option>
+                </select>
+            </div>
+
+            
+
+            
+
+            <!-- Search Button -->
+            <button type="submit">Search Flights</button>
+        </form>
+    </section>
+
+    <!-- FLIGHT RESULTS -->
+    <section class="flight-results">
+        <h2>Available Flights</h2>
+        <div class="flight-list" id="flight-list">
+            <!-- Flight results will be inserted here dynamically -->
+        </div>
+    </section>
+
+    <!-- PAYMENT AND BOOKING -->
+    <section class="payment-section" id="payment-section" style="display:none;">
+        <h2>Proceed to Payment</h2>
+        <div id="flight-summary"></div> <!-- Display flight details here -->
+
+        <form id="payment-form">
+            <!-- Cardholder Name -->
+            <div class="input-group">
+                <label for="card-name">Cardholder Name</label>
+                <input type="text" id="card-name" placeholder="John Doe" required>
+            </div>
+
+            <!-- Card Number -->
+            <div class="input-group">
+                <label for="card-number">Card Number</label>
+                <input type="text" id="card-number" placeholder="1234 5678 9876 5432" required>
+            </div>
+
+            <!-- Expiry Date -->
+            <div class="input-group">
+                <label for="expiry-date">Expiry Date</label>
+                <input type="month" id="expiry-date" required>
+            </div>
+
+            <!-- CVV -->
+            <div class="input-group">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" placeholder="123" required>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit">Pay ₹<span id="total-price"></span></button>
+        </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2024 Tour and Travel - All Rights Reserved</p>
+    </footer>
+
+    <script src="flight.js"></script>
+</body>
+</html>

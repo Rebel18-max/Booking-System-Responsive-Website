@@ -1,0 +1,166 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking</title>
+    <link rel="stylesheet" href="hotel.css">
+</head>
+<body>
+    <header>
+        <h1>Hotel Booking System</h1>
+    </header>
+
+    <main>
+        <section id="loved-hotels">
+            <h2>Our Loved Hotels</h2>
+            <div class="hotel-list">
+                <div class="hotel">
+                    <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0" alt="Hotel 1">
+                    <h3>Hotel Taj Mahal</h3>
+                    <p>Location: Agra</p>
+                    <p>Rating: ★★★★☆</p>
+                    <button class="book-now" data-hotel="Hotel Taj Mahal">Book Now</button>
+                </div>
+                
+            </div>
+        </section>
+
+        <div id="booking-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Booking Form</h2>
+                <form id="bookingForm">
+                    <label for="hotelSelect">Select Hotel:</label>
+                    <select id="hotelSelect" required>
+                        <option value="" disabled selected>Select a hotel</option>
+                        <option value="1">Hotel Taj Mahal - $55 (Sun-Wed), $95 (Thu-Sat)</option>
+                        
+                    </select>
+
+                    <label for="checkIn">Check-in Date:</label>
+                    <input type="date" id="checkIn" required>
+
+                    <label for="checkOut">Check-out Date:</label>
+                    <input type="date" id="checkOut" required>
+
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+
+                    <button type="submit">Confirm Booking</button>
+                </form>
+
+                <div id="totalPrice" style="margin-top: 20px; font-weight: bold;"></div>
+            </div>
+        </div>
+    </main>
+
+    <script src="hotel.js"></script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="hotel.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center my-4">Book Your Stay</h1>
+        
+        <div class="search-bar mb-4">
+            <input type="text" id="city" placeholder="Enter city" class="form-control">
+            <button id="search-btn" class="btn btn-primary mt-2">Search</button>
+        </div>
+
+        <div id="hotel-list" class="row">
+            <!-- Recommended hotels will be displayed here -->
+        </div>
+    </div>
+
+    <div class="recommended-hotels">
+        <h2>Recommended Hotels</h2>
+        <div class="hotel-card">
+            <img src="https://i.pinimg.com/564x/28/23/32/2823326ab3c8dccafc8f52c8f1a4a6e7.jpg" alt="Hotel 1">
+            <h3>Hotel Paradise</h3>
+            <p>Location: Goa</p>
+            <p>Price: ₹5000/night</p>
+            <button>Book Now</button>
+        </div>
+        <div class="hotel-card">
+            <img src="https://i.pinimg.com/564x/4d/f0/18/4df018aaa641fc78656fdb779fc41bcf.jpg" alt="Hotel 2">
+            <h3>Luxury Stay</h3>
+            <p>Location: Mumbai</p>
+            <p>Price: ₹7000/night</p>
+            <button>Book Now</button>
+        </div>
+        <div class="hotel-card">
+            <img src="https://i.pinimg.com/564x/6d/3a/ab/6d3aabb6cb1236e6f93e7f81f11af6b1.jpg" alt="Hotel 3">
+            <h3>Cozy Retreat</h3>
+            <p>Location: Kerala</p>
+            <p>Price: ₹4500/night</p>
+            <button>Book Now</button>
+        </div>
+        <div class="hotel-card">
+            <img src="https://i.pinimg.com/564x/4f/7a/84/4f7a8447278bcc35c66d766548185fb2.jpg" alt="Hotel 4">
+            <h3>Mountain View Resort</h3>
+            <p>Location: Shimla</p>
+            <p>Price: ₹6000/night</p>
+            <button>Book Now</button>
+        </div>
+    </div>
+    <!-- Booking Modal -->
+<div class="modal fade" id="bookingModal" tabindex="-1" role="dialog" aria-labelledby="bookingModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="bookingModalLabel">Book Your Stay</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="bookingForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="checkin">Check-in Date</label>
+                        <input type="date" class="form-control" id="checkin" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="checkout">Check-out Date</label>
+                        <input type="date" class="form-control" id="checkout" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="rooms">Number of Rooms</label>
+                        <input type="number" class="form-control" id="rooms" required min="1">
+                    </div>
+                    <input type="hidden" id="hotelName">
+                    <button type="submit" class="btn btn-primary">Confirm Booking</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="hotel.js"></script>
+</body>
+</html>
